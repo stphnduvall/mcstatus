@@ -1,21 +1,9 @@
 import net from 'net';
+import { Status, McServer } from './types';
 
-const options = {
-  hostname: 'mc.stephenduvall.me',
+const options: McServer= {
+  ip: 'mc.stephenduvall.me',
   port: 25565,
-}
-
-interface Status {
-  ping?: number,
-  version?: string,
-  motd?: string,
-  players?: number,
-  max_players?: number,
-}
-
-interface McServer {
-  ip: string
-  port?: number
 }
 
 let res: Status = {} // Need to figure how to assign vars at different times
