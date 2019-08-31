@@ -7,6 +7,6 @@ export interface Status {
 }
 
 export interface McServer {
-  ip: string;
-  port?: number;
+  host: string;
+  port: number;
 }
