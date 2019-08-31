@@ -8,7 +8,7 @@ const options: McServer= {
 
 let res: Status = {} // Need to figure how to assign vars at different times
 
-function checkStatus(server: McServer): Status {
+export default function checkStatus(server: McServer): Status {
 
 
   return res
