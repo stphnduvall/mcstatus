@@ -37,5 +37,7 @@ export default function checkStatus(server: McServer) {
       }
       resolve(res)
     })
+
+    client.on('error', (err) => reject(err))
   })
 }
