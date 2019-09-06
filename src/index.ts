@@ -9,6 +9,7 @@ const options: McServer= {
 export default function checkStatus(server: McServer) {
   const start_time = new Date()
   let ping: Number
+  let data: string
 
   const client = net.connect(server, () => {
     ping = Math.round(new Date().getMilliseconds() - start_time.getMilliseconds())
@@ -16,8 +17,6 @@ export default function checkStatus(server: McServer) {
     let buff = Buffer.from([ 0xFE, 0x01 ])
     client.write(buff)
   })
-
-  let data: string
 
   client.on('data', (d) => {
     data = d.toString()
