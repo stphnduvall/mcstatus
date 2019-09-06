@@ -22,9 +22,10 @@ export default function checkStatus(server: McServer) {
 
     client.on('data', (d) => {
       data = d.toString()
+      client.destroy()
     })
 
-    client.on('end', () => {
+    client.on('close', () => {
       let server_info = data.split('\x00\x00\x00')
 
       let res: Status = {
