@@ -1,10 +1,5 @@
-import net from 'net';
-import { Status, McServer } from './types';
-
-const options: McServer= {
-  host: 'mc.stephenduvall.me',
-  port: 25565,
-}
+import net from 'net'
+import { Status, McServer } from './types'
 
 export default function checkStatus(server: McServer) {
 
