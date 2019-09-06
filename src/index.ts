@@ -8,7 +8,7 @@ const options: McServer= {
 
 let res: Status = {} // Need to figure how to assign vars at different times
 
-export default function checkStatus(server: McServer): Status {
+export default function checkStatus(server: McServer) {
   const start_time = new Date()
 
   const client = net.connect(server, () => {
@@ -32,6 +32,4 @@ export default function checkStatus(server: McServer): Status {
     res.players = Number(server_info[4].replace(/\u0000/g, ''))
     res.max_players = Number(server_info[5].replace(/\u0000/g, ''))
   })
-
-  return res
 }
