@@ -10,9 +10,10 @@ let res: Status = {} // Need to figure how to assign vars at different times
 
 export default function checkStatus(server: McServer) {
   const start_time = new Date()
+  let ping: Number
 
   const client = net.connect(server, () => {
-    res.ping = Math.round(new Date().getMilliseconds() - start_time.getMilliseconds())
+    ping = Math.round(new Date().getMilliseconds() - start_time.getMilliseconds())
 
     let buff = Buffer.from([ 0xFE, 0x01 ])
     client.write(buff)
