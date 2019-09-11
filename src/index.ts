@@ -1,7 +1,7 @@
 import net from 'net'
 import { Status, McServer } from './types'
 
-export default function checkStatus(server: McServer) {
+export function checkStatus(server: McServer): Promise<Status> {
 
   return new Promise((resolve, reject) => {
     const start_time = new Date()
