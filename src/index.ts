@@ -1,11 +1,11 @@
 import net from 'net'
 
 export declare interface Status {
-  ping?: number
-  version?: string
-  motd?: string
-  players?: number
-  max_players?: number
+  ping: number
+  version: string
+  motd: string
+  players: number
+  max_players: number
 }
 
 export declare interface McServer {
