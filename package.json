@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Module for checking status of a Minecraft Server",
   "main": "dist/index.js",
-  "types": "dist/types.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm dist/*",
     "test": "node dist/index.js",
