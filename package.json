@@ -20,8 +20,6 @@
     "url": "git+https://github.com/stphnduvall/mcstatus.git"
   },
   "keywords": [
-    "npm",
-    "node",
     "minecraft",
     "minecraft server",
     "typescript"
