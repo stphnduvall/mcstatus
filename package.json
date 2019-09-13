@@ -10,7 +10,7 @@
     "watch": "tsc -p tsconfig.json -w"
   },
   "author": "Stephen DuVall",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^12.7.5"
   },
