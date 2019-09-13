@@ -32,5 +32,5 @@ McStatus.checkStatus(options).then(console.log)
 [Stephen DuVall](https://github.com/stphnduvall)
 
 ## Future
-- [ ] Add the ability to pass hostname and port directly into the function without the McServer object
-- [ ] Add the ability to not give a port and default it to `25565`
+* [ ] Add the ability to pass hostname and port directly into the function without the McServer object
+* [ ] Add the ability to not give a port and default it to `25565`
