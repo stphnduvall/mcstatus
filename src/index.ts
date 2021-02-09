@@ -33,7 +33,20 @@ export function checkStatus(server: McServer): Promise<Status> {
     })
 
     client.on('close', () => {
-      let server_info = data.split('\x00\x00\x00')
+      let server_info = data?.split('\x00\x00\x00')
+
+      if (!server_info) {
+        let res: Status = {
+          ping: Number(ping),
+          version: 'Unknown',
+          motd: 'Unknown',
+          players: 0,
+          max_players: 0
+        }
+
+        resolve(res)
+        return
+      }
 
       let res: Status = {
         ping: Number(ping),
